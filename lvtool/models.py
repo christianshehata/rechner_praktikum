@@ -8,6 +8,7 @@ from django.db import models
 # Course = LV
 
 
+
 class Major(models.Model):
     major_name = models.CharField(verbose_name="Studienrichtung", max_length=30, primary_key=True)
 
