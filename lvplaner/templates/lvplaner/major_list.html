@@ -3,21 +3,21 @@
 {% block title%} STUDIUM {% endblock %}
 
 {% block content %}
-<div class="lvtool">
 
 <header>
-<h2> STUDIUM 📚 </h2>
+<h2> WÄHLE DEIN STUDIUM 📚 </h2>
 </header>
-    <br />
+<br />
+<body>
 <div class="cards">
-   {% for major in major_list %}
+   {% for major in majors %}
     <div class = "card">
         <header> {{ major.major_name }} </header>
-        <div class="card-copy">
+        <!--<div class="card-copy">
         {{ major.major_name }} <br />
-        </div>
+        </div>-->
     </div>
     {% endfor %}
 </div>
+</body>
 {% endblock %}
-</div>

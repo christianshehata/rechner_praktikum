@@ -1,8 +1,70 @@
 html {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background: #e8e7e7;
+  font-family: 'Montserrat';font-size: 20px;
+  }
 
 *, *::after, *::before {
   box-sizing: inherit; }
+
+
+
+header {
+  color: #FFF;
+  padding: 5px 10px;
+  text-align: center;
+  align-items: center;
+  background-color: #D0D0D0;
+  border-bottom: solid 2px #D4CAFF;
+}
+
+.lvtool {
+  background: #fff;
+  text-align: center;
+  width: 1200px;
+  height: 800px;
+  margin: 70px auto;
+  box-shadow: 0px 0px 10px rgb(133, 104, 250);
+  border-radius: 6px;
+}
+
+.align-right{
+  text-align: right !important;
+}
+
+
+.btn {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 80px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.btn-1 {
+    border: 3px solid #fff;
+    color: #fff;
+}
+
+.btn-1d {
+    overflow: hidden;
+}
+
+.btn-1d:hover, .btn-1d:active {
+    color: #0e83cd;
+}
 
 .site-container {
    font: normal bold 12px/30px Verdana, normal;
@@ -86,9 +148,10 @@ html {
   border: 1px solid gainsboro;
   box-shadow: 0 2px 4px #e6e6e6;
   margin: 0 1em 1.5em 1em;
-  position: relative; }
+  position: relative;
+}
   .card header {
-    font: normal bold 12px/30px Verdana, normal;
+
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
@@ -97,7 +160,8 @@ html {
     border-radius: 3px 3px 0 0;
     font-weight: bold;
     line-height: 1.5em;
-    padding: 0.5em 0.75em; }
+    padding: 0.5em 0.75em;
+    color: black;}
     .card header a {
       color: #642039;
       text-decoration: none; }
@@ -122,5 +186,3 @@ article .steps {
   article .steps h3 + p {
     margin-left: 1em; }
 
-
-/*# sourceMappingURL=layout.css.map */

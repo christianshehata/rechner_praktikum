@@ -15,9 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import include
+from django.conf.urls import include, url
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from . import views
 
 urlpatterns = [
+    path('lvplaner/', include('lvplaner.urls')),
     path('admin/', admin.site.urls),
-    #path('lvplaner/', include('lvplaner.urls'))
+    path('', views.hello_world),
+    # path('lvplaner/', include('lvplaner.urls'))
 ]
+
+urlpatterns += staticfiles_urlpatterns()
