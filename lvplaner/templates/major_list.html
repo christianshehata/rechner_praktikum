@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title%} STUDIUM {% endblock %}
+
+{% block content %}
+<div class="lvtool">
+
+<header>
+<h2> STUDIUM 📚 </h2>
+</header>
+    <br />
+<div class="cards">
+   {% for major in major_list %}
+    <div class = "card">
+        <header> {{ major.major_name }} </header>
+        <div class="card-copy">
+        {{ major.major_name }} <br />
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+</div>
