@@ -11,6 +11,6 @@ def major_list(request):
     return render(request, 'lvplaner/major_list.html', {'majors': majors})
 
 
-def major_detail(request, pk):
-    major = get_object_or_404(Major, pk=pk)
+def major_detail(request, major_name):
+    major = get_object_or_404(Major, pk=major_name)
     return render(request, 'lvplaner/major_detail.html', {'major': major})

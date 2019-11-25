@@ -7,6 +7,13 @@ from django.db import models
 # Subject = FACH
 # Course = LV
 
+# RELATIONS
+
+# Student - Course 1 to n
+# Subject - Major n to n
+# Major - Student 1 to n
+# Course - Student n to n
+
 
 class Major(models.Model):
     major_name = models.CharField(verbose_name="Studienrichtung", max_length=30, primary_key=True)

@@ -12,10 +12,9 @@
 <div class="cards">
    {% for major in majors %}
     <div class = "card">
-        <header> {{ major.major_name }} </header>
-        <!--<div class="card-copy">
-        {{ major.major_name }} <br />
-        </div>-->
+        <header>
+            <a href="{% url 'details' major.major_name %}"> {{ major.major_name }} </a>
+        </header>
     </div>
     {% endfor %}
 </div>

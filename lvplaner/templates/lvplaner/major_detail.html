@@ -5,19 +5,19 @@
 {% block content %}
 
 <header>
-<h2> Wähle deine Fächer {{major.major_name }} 📚 </h2>
+<h2> Wähle deine Fächer aus {{ major.major_name }} 📚 </h2>
 </header>
 <br />
-<!--<body>
+<body>
 <div class="cards">
    {% for subject in major.subject_set.all %}
     <div class = "card">
-        <header> {{ subject.major_name }} </header>
+        <header> {{ subject.title }} </header>
         <div class="card-copy">
-        {{ subject.major_name }} <br />
+        {{  major.major_name }} <br />
         </div>
     </div>
     {% endfor %}
 </div>
-</body>-->
+</body>
 {% endblock %}
