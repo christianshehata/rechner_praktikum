@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %} Studenten {% endblock %}
+
+{% block content %}
+
+<header>
+<h2> Registrierte Studenten 📓 </h2>
+</header>
+<br />
+<body>
+<div class="cards">
+    {% for student in students %}
+    <div class = "card">
+        <header>  {{ student.m_nr }} </header>
+        <div class="card-copy">
+        {{ student.first_name }}
+        {{ student.last_name }}<br />
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</body>
+{% endblock %}
+

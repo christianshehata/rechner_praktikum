@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Major, Subject, Course
+from .models import Major, Subject, Course, Student
 from django.http import HttpResponse
 
 
@@ -21,5 +21,6 @@ def courses(request, major_name, subject_title):
     return render(request, 'lvplaner/courses.html', {'subject': subject})
 
 
-
-
+def student_list(request):
+    students = Student.objects.all()
+    return render(request, 'lvplaner/student_list.html', {'students': students})
