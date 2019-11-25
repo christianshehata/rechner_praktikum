@@ -31,7 +31,7 @@ class Student(models.Model):
     major_name = models.ForeignKey(Major, on_delete=models.PROTECT)
 
     def __str__(self):
-        template = '{0.first_name}, {0.last_name} ({0.m_nr})'
+        template = '{0.first_name}, {0.last_name} ({0.m_nr}) - {0.major_name}'
         return template.format(self)
 
 
