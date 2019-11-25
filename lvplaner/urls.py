@@ -5,7 +5,7 @@ from django.urls import path
 # you can use path or url
 
 urlpatterns = [
-    url(r'^$', views.major_list),
+    url(r'^$', views.major_list, name='list'),
     url(r'^(?P<major_name>[-\w\d]+)/$', views.major_detail, name='details'),
-
+    url(r'^(?P<major_name>[-\w\d]+)/(?P<subject_title>[-\w\d\s]+)/$', views.courses, name='courses'),
 ]

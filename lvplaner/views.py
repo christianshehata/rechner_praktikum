@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Major
+from .models import Major, Subject, Course
 from django.http import HttpResponse
 
 
@@ -14,3 +14,12 @@ def major_list(request):
 def major_detail(request, major_name):
     major = get_object_or_404(Major, pk=major_name)
     return render(request, 'lvplaner/major_detail.html', {'major': major})
+
+
+def courses(request, major_name, subject_title):
+    subject = get_object_or_404(Subject, pk=subject_title)
+    return render(request, 'lvplaner/courses.html', {'subject': subject})
+
+
+
+

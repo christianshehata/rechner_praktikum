@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %} FÄCHER {% endblock %}
+
+{% block content %}
+
+<header>
+<h2> Wähle deine Fächer aus {{ major.major_name }} 📚 </h2>
+</header>
+<br />
+<body>
+<div class="cards">
+   {% for course in subject.course_set.all %}
+    <div class = "card">
+        <header> {{ course.course_id }} {{  course.subject_title }} </header>
+        <div class="card-copy">
+            {{ course.date }}
+        </div>
+        <div class="card-copy">
+            {{ course.time }} {{ course.end_time }}
+        </div>
+        <div class="card-copy">
+            {{ course.lecturer }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</body>
+{% endblock %}
