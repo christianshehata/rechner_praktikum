@@ -23,7 +23,6 @@ urlpatterns = [
     path('lvplaner/', include('lvplaner.urls')),
     path('admin/', admin.site.urls),
     path('', views.hello_world),
-    # path('lvplaner/', include('lvplaner.urls'))
 ]
 
 urlpatterns += staticfiles_urlpatterns()
