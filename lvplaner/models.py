@@ -37,7 +37,8 @@ class Student(models.Model):
 
 class Course(models.Model):
     course_id = models.IntegerField(max_length=4, verbose_name="LV-Nummer", primary_key=True)
-    time = models.TimeField(verbose_name='Uhrzeit')
+    time = models.TimeField(verbose_name='Uhrzeit Beginn')
+    end_time = models.TimeField(verbose_name='Uhrzeit Ende', default='18:30')
     date = models.DateField(verbose_name='Datum')
     lecturer = models.CharField(verbose_name='Dozent', max_length=40)
     subject_title = models.ForeignKey(Subject, on_delete=models.PROTECT)
