@@ -32,7 +32,7 @@ class Subject(models.Model):
 
 
 class Student(models.Model):
-    m_nr = models.IntegerField(max_length=8, verbose_name='Matrikelnummer', primary_key=True)
+    m_nr = models.IntegerField(verbose_name='Matrikelnummer', primary_key=True)
     first_name = models.CharField(verbose_name="Vorname", max_length=20)
     last_name = models.CharField(verbose_name="Nachname", max_length=20)
     major_name = models.ForeignKey(Major, on_delete=models.PROTECT)
@@ -43,7 +43,7 @@ class Student(models.Model):
 
 
 class Course(models.Model):
-    course_id = models.IntegerField(max_length=4, verbose_name="LV-Nummer", primary_key=True)
+    course_id = models.IntegerField(verbose_name="LV-Nummer", primary_key=True)
     time = models.TimeField(verbose_name='Uhrzeit Beginn')
     end_time = models.TimeField(verbose_name='Uhrzeit Ende', default='18:30')
     date = models.DateField(verbose_name='Datum')
