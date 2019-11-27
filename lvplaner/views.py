@@ -42,6 +42,18 @@ def createmajor(request):
     return render(request, 'lvplaner/createmajor.html', {'form': form})
 
 
+def delete_major(request):
+    form = MajorForm()
+    inventory = Major.objects.all()
+    if request.method == 'POST':
+        item_id = str(request.POST.get('major_name'))
+        item = Major.objects.get(major_name=item_id)
+        item.delete()
+        messages.success(request, ('Major has been deleted!'))
+        return HttpResponseRedirect('/')
+    return render(request, 'lvplaner/deletemajor.html', {'form': form, 'inventory': inventory})
+
+
 def createsubject(request):
     form = SubjectForm()
     if request.method == 'POST':

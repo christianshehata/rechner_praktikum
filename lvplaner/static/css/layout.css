@@ -7,7 +7,13 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-
+.rotate90 {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
 
 header {
   color: #FFF;
@@ -173,16 +179,3 @@ header {
     padding: 0.75em 0.75em; }
     .card .card-copy p {
       margin: 0 0 0.75em; }
-
-article h2 a,
-article h3 a {
-  color: #642039;
-  text-decoration: none; }
-  article h2 a:hover,
-  article h3 a:hover {
-    text-decoration: underline; }
-article .steps {
-  border-top: 2px solid #e6557e; }
-  article .steps h3 + p {
-    margin-left: 1em; }
-
