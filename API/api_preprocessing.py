@@ -5,7 +5,7 @@ Some steps to clean the data:
 3. remove unnecessary information (building, room)
 '''
 
-from api_search import data_search
+# from api_search import data_search
 # from api import list_iter <-- import error
 import datetime
 
