@@ -47,32 +47,21 @@ def list_iter(lv_list, semester):
     # print(data_list)
     return data_list
 
-# lv_list = filter_data(data_search, 'Mathematik', '19W')
-
-# print(lv_list)
-
-
-# list_iter(filter_data(data_search, 'Mathematik', '19W'), '19W')
-
-# print(rem_items(time_converter(list_iter(filter_data(data_search, 'Mathematik', '19W'), '19W'))))
-
-# rem_items(time_converter(list_iter(filter_data(data_search, 'Mathematik', '19W'), '19W')))
-
-
-#print(test_counter(rem_items(time_converter(list_iter(filter_data(data_search, 'Mathematik', '19W'), '19W'))), 'Mathematik'))
+# ----function calls---- #
 
 subject_inp_list = ['Mathematik', 'Statistik']
 
 filter_data(data_search, subject_inp_list, '19W')
 
-# list_iter(filter_data(data_search, subject_inp_list, '19W'), '19W')
+list_iter(filter_data(data_search, subject_inp_list, '19W'), '19W')
 
-# time_converter(list_iter(filter_data(data_search, subject_inp_list, '19W'), '19W'))
+time_converter(list_iter(filter_data(data_search, subject_inp_list, '19W'), '19W'))
 
-rem = rem_items(time_converter(list_iter(filter_data(data_search, subject_inp_list, '19W'), '19W')))
+rem_items(time_converter(list_iter(filter_data(data_search, subject_inp_list, '19W'), '19W')))
 
-last = counter_subject(rem_items(time_converter(list_iter(filter_data(data_search, subject_inp_list, '19W'), '19W'))), filter_data(data_search, subject_inp_list, '19W'))
+counter_subject(rem_items(time_converter(list_iter(filter_data(data_search, subject_inp_list, '19W'), '19W'))),
+                filter_data(data_search, subject_inp_list, '19W'))
 
-check_freq_sub(last)
-
-# check_freq_day(rem)
+check_freq_sub(
+    counter_subject(rem_items(time_converter(list_iter(filter_data(data_search, subject_inp_list, '19W'), '19W'))),
+                    filter_data(data_search, subject_inp_list, '19W')))

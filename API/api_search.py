@@ -30,6 +30,6 @@ def get_data(subjects):
 # define a list of subjects:
 subject_list = [['Mathematik'], ['Statistik']]
 
-
 data_search = get_data(subject_list)
+
 # print(data_search)

@@ -1,5 +1,8 @@
 '''
-Some steps to clean the data.
+Some steps to clean the data:
+1. pick only the important information (all lv's with the chosen title)
+2. cast string to datetime
+3. remove unnecessary information (building, room)
 '''
 
 from api_search import data_search
@@ -44,8 +47,3 @@ def rem_items(data):
 
 
 # print(data_search)
-# print(filter_data(data_search, 'Mathematik', 'W19'))
-
-#list_iter(filter_data(data_search, 'Mathematik', '19W'), '19W')
-
-# rem_items(time_converter(list_iter(filter_data(data_search, 'Mathematik', '19W'), '19W')))
