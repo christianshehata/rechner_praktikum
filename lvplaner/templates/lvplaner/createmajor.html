@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %} Studienrichtung hinzufügen {% endblock title %}
+{% block content %}
+<header>
+   <h1> Studienrichtung hinzufügen </h1>
+</header>
+<body>
+    <form action="" method="POST">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit">
+    </form>
+{% endblock content %}
+</body>
+>
