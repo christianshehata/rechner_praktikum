@@ -10,9 +10,21 @@
     <header>
         <a href="/">Home</a>
          <a href="{% url 'students' %}">Studenten</a>
-<!--        <a href="{#% url 'list' %}">Studienrichtungen</a>-->
+         <a href="{% url 'list' %}">Studienrichtungen</a>
+        <a href="{% url 'suggestion' %}">Feedback</a>
+        <a href="{% url 'createmajor' %}">Studium hinzufügen</a>
+        <a href="{% url 'createsubject' %}">Fach hinzufügen </a>
+        <a href="{% url 'deletemajor' %}">Studium löschen </a>
     </header>
     <body class="lvtool">
         {% block content %} {% endblock content %}
+        {% if messages %}
+        {% for message in messages %}
+        <div data-alert class="alert-box {{ message.tags }} radius">
+            {{ message }}
+            <a href="/" class="close">&times;</a>
+        </div>
+    {% endfor %}
+    {% endif %}
     </body>
 </html>

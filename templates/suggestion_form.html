@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block title %} Suggest an idea {% endblock title %}
+{% block content %}
+<header>
+   <h1> Gib uns ein Feedback! </h1>
+</header>
+<body>
+<p>
+    <form action="" method="POST">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit">
+    </form>
+</p>
+
+{% endblock content %}
+</body>

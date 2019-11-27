@@ -22,6 +22,7 @@ from . import views
 urlpatterns = [
     path('lvplaner/', include('lvplaner.urls')),
     path('admin/', admin.site.urls),
+    path('suggest/', views.suggestion_view, name='suggestion'),
     path('', views.hello_world),
 
 ]

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %} Fach hinzufügen {% endblock title %}
+{% block content %}
+<header>
+   <h1> Fach hinzufügen </h1>
+</header>
+<body>
+    <form action="" method="POST">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit">
+    </form>
+    <h5> PS: Studienrichtung nicht vergessen auszuwählen 😎 </h5>
+{% endblock content %}
+</body>
+>
