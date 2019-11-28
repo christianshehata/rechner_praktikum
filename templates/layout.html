@@ -8,13 +8,14 @@
         <link rel="stylesheet" href="{% static 'css/layout.css' %}">
     </head>
     <header>
-        <a href="/">Home</a>
-         <a href="{% url 'students' %}">Studenten</a>
-         <a href="{% url 'list' %}">Studienrichtungen</a>
-        <a href="{% url 'suggestion' %}">Feedback</a>
-        <a href="{% url 'createmajor' %}">Studium hinzufügen</a>
-        <a href="{% url 'createsubject' %}">Fach hinzufügen </a>
-        <a href="{% url 'deletemajor' %}">Studium löschen </a>
+        <a href="/">Home|</a>
+         <a href="{% url 'students' %}">Studenten|</a>
+         <a href="{% url 'list' %}">Studienrichtungen|</a>
+        <a href="{% url 'createmajor' %}">Studium hinzufügen|</a>
+        <a href="{% url 'createsubject' %}">Fach hinzufügen|</a>
+        <a href="{% url 'deletemajor' %}">Studium löschen|</a>
+       <a href="{% url 'suggestion' %}">Feedback|</a>
+
     </header>
     <body class="lvtool">
         {% block content %} {% endblock content %}

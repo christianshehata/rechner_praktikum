@@ -15,7 +15,12 @@
         <header>  {{ student.m_nr }} </header>
         <div class="card-copy">
         {{ student.first_name }}
-        {{ student.last_name }}<br />
+        {{ student.last_name }}
+            <hr />
+        </div>
+        <div class="card-copy">
+            {{ student.major_name }}
+       <br />
         </div>
     </div>
     {% endfor %}
