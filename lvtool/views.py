@@ -9,7 +9,7 @@ from .forms import SuggestionForm
 def hello_world(request):
     return render(request, 'home.html')
 
-
+# Feedback
 def suggestion_view(request):
     form = SuggestionForm()
     if request.method == 'POST':
