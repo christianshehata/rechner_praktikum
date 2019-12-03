@@ -1,11 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Major, Subject, Course, Student
 from django.http import HttpResponse
-from .forms import MajorForm, SubjectForm
+from .forms import MajorForm, SubjectForm, CourseForm
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-
 
 
 # Create your views here.
@@ -63,3 +62,14 @@ def createsubject(request):
             messages.success(request, ('Item has been successfully added to the database!'))
             return HttpResponseRedirect('/')
     return render(request, 'lvplaner/createsubject.html', {'form': form})
+
+
+def createcourse(request):
+    form = CourseForm()
+    if request.method == 'POST':
+        form = CourseForm(request.POST or None)
+        if form.is_valid():
+            form.save()
+            messages.success(request, ('Course has been successfully added to the database!'))
+            return HttpResponseRedirect('/')
+    return render(request, 'lvplaner/createcourse.html', {'form': form})

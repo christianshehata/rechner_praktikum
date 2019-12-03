@@ -1,8 +1,8 @@
 {% extends "layout.html" %}
-{% block title %} Studienrichtung hinzufügen {% endblock title %}
+{% block title %} Kurs hinzufügen {% endblock title %}
 {% block content %}
 <header>
-   <h1> Studienrichtung hinzufügen </h1>
+   <h1> Kurs hinzufügen </h1>
 </header>
 <body>
     <form action="" method="POST">
@@ -10,5 +10,6 @@
     {% csrf_token %}
     <input type="submit">
     </form>
+    <h5> PS: Fach (Subject_title) nicht vergessen auszuwählen 🧐 </h5>
 {% endblock content %}
 </body>
