@@ -59,7 +59,7 @@ def createsubject(request):
         form = SubjectForm(request.POST or None)
         if form.is_valid():
             form.save()
-            messages.success(request, ('Item has been successfully added to the database!'))
+            messages.success(request, ('Subject has been successfully added'))
             return HttpResponseRedirect('/')
     return render(request, 'lvplaner/createsubject.html', {'form': form})
 
@@ -70,6 +70,18 @@ def createcourse(request):
         form = CourseForm(request.POST or None)
         if form.is_valid():
             form.save()
-            messages.success(request, ('Course has been successfully added to the database!'))
+            messages.success(request, ('Course has been successfully added'))
             return HttpResponseRedirect('/')
     return render(request, 'lvplaner/createcourse.html', {'form': form})
+
+
+# def deletecourse(request):
+#     form = CourseForm()
+#     inventory = Course.objects.all()
+#     if request.method == 'POST':
+#         item_id = str(request.POST.get('course_id'))
+#         item = Course.objects.get(course_id=item_id)
+#         item.delete()
+#         messages.success(request, ('Course has been deleted!'))
+#         return HttpResponseRedirect('/')
+#     return render(request, 'lvplaner/deletecourse.html', {'form': form, 'inventory': inventory})
