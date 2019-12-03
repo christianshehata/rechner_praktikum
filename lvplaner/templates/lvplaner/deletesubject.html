@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %} Fach löschen {% endblock title %}
+{% block content %}
+<header>
+   <h1> Fach löschen </h1>
+</header>
+<body>
+    <form action="" method="POST">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" value="Delete">
+    </form>
+{% endblock content %}
+</body>
+>
