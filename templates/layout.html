@@ -4,19 +4,21 @@
 <html>
     <head>
         <title> {% block title %} Well hello there {% endblock title %}  </title>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/layout.css' %}">
     </head>
     <header>
-        <a href="/">Home|</a>
-         <a href="{% url 'students' %}">Studenten|</a>
-         <a href="{% url 'list' %}">Studienrichtungen|</a>
-        <a href="{% url 'createmajor' %}">Studium hinzufügen|</a>
-        <a href="{% url 'createsubject' %}">Fach hinzufügen|</a>
-        <a href="{% url 'deletesubject' %}">Fach löschen|</a>
-        <a href="{% url 'deletemajor' %}">Studium löschen|</a>
-        <a href="{% url 'createcourse' %}">Kurs hinzufügen|</a>
-        <a href="{% url 'suggestion' %}">Feedback|</a>
+        <nav class="cl-effect-21" id="cl-effect-21">
+        <a href="/">Home</a>
+         <a href="{% url 'students' %}">Studenten</a>
+         <a href="{% url 'list' %}">Studienrichtungen</a>
+        <a href="{% url 'createmajor' %}">Studium hinzufügen</a>
+        <a href="{% url 'createsubject' %}">Fach hinzufügen</a>
+        <a href="{% url 'deletesubject' %}">Fach löschen</a>
+        <a href="{% url 'deletemajor' %}">Studium löschen</a>
+        <a href="{% url 'createcourse' %}">Kurs hinzufügen </a>
+        <a href="{% url 'suggestion' %}">Feedback</a>
+        </nav>
     </header>
     <body class="lvtool">
         {% block content %} {% endblock content %}

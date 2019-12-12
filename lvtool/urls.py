@@ -19,12 +19,14 @@ from django.conf.urls import include, url
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import views
 
+
 urlpatterns = [
     path('lvplaner/', include('lvplaner.urls')),
+    url(r'^accounts/', include(('accounts.urls', 'accounts'), namespace='accounts')),
     path('admin/', admin.site.urls),
+    path('hello/', views.HelloWorldView.as_view(), name='hello'),
     path('suggest/', views.suggestion_view, name='suggestion'),
-    path('', views.hello_world),
-
+    path('', views.hello_world, name='home'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

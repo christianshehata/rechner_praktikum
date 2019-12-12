@@ -1,9 +1,12 @@
 <component name="ProjectDictionaryState">
   <dictionary name="cshehata">
     <words>
+      <w>createcourse</w>
       <w>createmajor</w>
       <w>createpost</w>
       <w>createsubject</w>
+      <w>deletecourse</w>
+      <w>deletesubject</w>
       <w>endblock</w>
       <w>filebased</w>
       <w>lvplaner</w>

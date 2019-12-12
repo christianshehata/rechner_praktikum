@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
   background: #e8e7e7;
-  font-family: 'Montserrat';font-size: 20px;
+  font-family: 'Nunito', sans-serif;
   }
 
 *, *::after, *::before {
@@ -21,7 +21,6 @@ header {
   text-align: center;
   align-items: center;
   background-color: #D0D0D0;
-  border-bottom: solid 2px #D4CAFF;
   font-size: 17px;
 }
 
@@ -31,9 +30,46 @@ header {
   width: 1200px;
   height: 800px;
   margin: 70px auto;
-  box-shadow: 0px 0px 10px rgb(133, 104, 250);
+  box-shadow: 0px 0px 30px rgb(133, 104, 250);
   border-radius: 6px;
 }
+
+.cl-effect-21 a:hover, .cl-effect-21 a:focus {
+    color: #fff;
+}
+
+nav a:hover, nav a:focus {
+    outline-color: initial;
+    outline-style: none;
+    outline-width: initial;
+}
+
+.cl-effect-21 a {
+    padding: 5px;
+    color: #237546;
+    font-weight: 200;
+    text-shadow: none;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+
+nav a {
+    position: relative;
+    display: inline-block;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 200;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    font-size: 1.00em;
+}
+
+
+
 
 .align-right{
   text-align: right !important;

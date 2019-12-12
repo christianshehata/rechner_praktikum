@@ -1,10 +1,12 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Major, Subject, Course, Student
 from django.http import HttpResponse
 from .forms import MajorForm, SubjectForm, CourseForm
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.views.generic import View
 
 
 # Create your views here.
@@ -63,6 +65,7 @@ def createsubject(request):
             return HttpResponseRedirect('/')
     return render(request, 'lvplaner/createsubject.html', {'form': form})
 
+
 def deletesubject(request):
     form = SubjectForm()
     inventory = Subject.objects.all()
@@ -84,7 +87,6 @@ def createcourse(request):
             messages.success(request, ('Course has been successfully added'))
             return HttpResponseRedirect('/')
     return render(request, 'lvplaner/createcourse.html', {'form': form})
-
 
 # def deletecourse(request):
 #     form = CourseForm()

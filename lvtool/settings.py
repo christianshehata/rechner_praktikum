@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
     'lvplaner',
 ]
 
@@ -128,5 +129,6 @@ STATICFILES_DIRS = (
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'suggestions')
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+LOGIN_REDIRECT_URL = 'list'
 
 django_heroku.settings(locals())
