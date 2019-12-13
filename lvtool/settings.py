@@ -131,10 +131,10 @@ EMAIL_USE_TLS = True
 
 EMAIL_HOST = 'smtp.gmail.com'
 
-EMAIL_HOST_USER = 'c.shehata112@gmail.com'
+EMAIL_HOST_USER = 'lvplaner@gmail.com'
 
 #Must generate specific password for your app in [gmail settings][1]
-EMAIL_HOST_PASSWORD = 'stegdiW2435[]'
+EMAIL_HOST_PASSWORD = 'Nice2have!'
 
 EMAIL_PORT = 587
 

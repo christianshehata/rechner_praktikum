@@ -27,7 +27,7 @@ def suggestion_view(request):
                 'Suggestion form {}'.format(form.cleaned_data['name']),
                 form.cleaned_data['suggestion'],
                 '{name} <{email}>'.format(**form.cleaned_data),
-                ['c.shehata112@gmail.com']
+                ['lvplaner@gmail.com']
             )
             messages.add_message(request, messages.SUCCESS, 'Thanks for your suggestion!')
             return HttpResponseRedirect(reverse('suggestion'))
