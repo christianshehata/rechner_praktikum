@@ -126,9 +126,21 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
-EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'suggestions')
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+
+EMAIL_HOST = 'smtp.gmail.com'
+
+EMAIL_HOST_USER = 'c.shehata112@gmail.com'
+
+#Must generate specific password for your app in [gmail settings][1]
+EMAIL_HOST_PASSWORD = 'stegdiW2435[]'
+
+EMAIL_PORT = 587
+
+#This did the trick
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+#EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'suggestions')
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-LOGIN_REDIRECT_URL = 'list'
 
 django_heroku.settings(locals())

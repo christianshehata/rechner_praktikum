@@ -1,17 +1,18 @@
 {% extends "layout.html" %}
-{% block title %} Login {% endblock title %}
+{% block title %} Sign-Up {% endblock title %}
 {% block content %}
 <header>
-   <h1> Login </h1>
+   <h1> Sign-Up </h1>
 </header>
 <body>
     <form action="" method="POST">
     {{ form.as_p }}
     {% csrf_token %}
-    <input type="submit" value="Login">
+    <input type="submit" value="Sign Up">
     </form>
 {% endblock content %}
 </body>
 
 
 
+>

@@ -2,16 +2,31 @@
 {% block title %} LV Tool {% endblock title %}
 {% block content %}
 <header>
-   <h1> Welcome! </h1>
+   <h1> Hi {{ user.username }}! </h1>
+   {% if user.is_authenticated and user.username == 'admin' %}
+    <nav class="cl-effect-21" id="cl-effect-21">
+      <a href="{% url 'logout' %}">logout</a>
+         <a href="{% url 'students' %}">Studenten</a>
+         <a href="{% url 'list' %}">Studienrichtungen</a>
+        <a href="{% url 'createmajor' %}">Studium hinzufügen</a>
+        <a href="{% url 'createsubject' %}">Fach hinzufügen</a>
+        <a href="{% url 'deletesubject' %}">Fach löschen</a>
+        <a href="{% url 'deletemajor' %}">Studium löschen</a>
+        <a href="{% url 'createcourse' %}">Kurs hinzufügen </a>
+        </nav>
+   {% else %}
+   <nav class="cl-effect-21" id="cl-effect-21">
+      <a href="{% url 'logout' %}">logout</a>
+         <a href="{% url 'list' %}">Studienrichtungen</a>
+        <a href="{% url 'suggestion' %}">Feedback</a>
+        </nav>
+    {% endif %}
 </header>
 <body>
-<p>
-Im Rahmen der LV: "Rechnerpraktikum aus Programmierung" wurde diese Webapplikation erstellt.
-Das Tool soll als unterstützendes Programm für Studenten/Studentinnen fungieren und bietet
-Kalendarvorschläge für eine optimale Semesterauslastung an.
-</p>
 
 <h3> Viel Spaß beim Ausprobieren 🤓 </h3>
 <a href="/lvplaner/">START</a>
-{% endblock content %}
+<!--<h2><a href="/accounts/signup/">Sign-Up</a> </h2>
+<h2><a href="/accounts/login/">Login</a></h2>-->
 </body>
+{% endblock content %}

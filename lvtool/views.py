@@ -9,6 +9,10 @@ from django.views.generic import View
 
 
 def hello_world(request):
+    return render(request, 'authentication.html')
+
+
+def home(request):
     return render(request, 'home.html')
 
 
@@ -23,7 +27,7 @@ def suggestion_view(request):
                 'Suggestion form {}'.format(form.cleaned_data['name']),
                 form.cleaned_data['suggestion'],
                 '{name} <{email}>'.format(**form.cleaned_data),
-                ['christian@shehata.dev']
+                ['c.shehata112@gmail.com']
             )
             messages.add_message(request, messages.SUCCESS, 'Thanks for your suggestion!')
             return HttpResponseRedirect(reverse('suggestion'))

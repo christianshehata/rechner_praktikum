@@ -1,11 +1,12 @@
 html {
   box-sizing: border-box;
   background: #e8e7e7;
-  font-family: 'Nunito', sans-serif;
-  }
+  font-family: 'Varela Round', sans-serif;
+}
 
 *, *::after, *::before {
   box-sizing: inherit; }
+
 
 .rotate90 {
     -webkit-transform: rotate(90deg);
@@ -22,6 +23,12 @@ header {
   align-items: center;
   background-color: #D0D0D0;
   font-size: 17px;
+}
+
+footer {
+position: fixed;
+    left:0;
+    bottom: 0;
 }
 
 .lvtool {
@@ -66,6 +73,19 @@ nav a {
     font-weight: 200;
     text-shadow: 0 0 1px rgba(255,255,255,0.3);
     font-size: 1.00em;
+}
+
+div.b {
+position: relative;
+  left: 0;
+}
+
+div.c {
+  position: absolute;
+  left: 150px;
+  width: 200px;
+  height: 120px;
+  border: 3px solid green;
 }
 
 

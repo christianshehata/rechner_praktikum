@@ -23,10 +23,12 @@ from . import views
 urlpatterns = [
     path('lvplaner/', include('lvplaner.urls')),
     url(r'^accounts/', include(('accounts.urls', 'accounts'), namespace='accounts')),
+    url(r'^accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
     path('hello/', views.HelloWorldView.as_view(), name='hello'),
     path('suggest/', views.suggestion_view, name='suggestion'),
-    path('', views.hello_world, name='home'),
+    path('', views.hello_world, name='authentication'),
+    path('/home', views.home, name='home'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

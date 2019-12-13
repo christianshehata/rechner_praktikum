@@ -6,11 +6,13 @@
       <w>createpost</w>
       <w>createsubject</w>
       <w>deletecourse</w>
+      <w>deletemajor</w>
       <w>deletesubject</w>
       <w>endblock</w>
       <w>filebased</w>
       <w>lvplaner</w>
       <w>lvtool</w>
+      <w>smtp</w>
     </words>
   </dictionary>
 </component>

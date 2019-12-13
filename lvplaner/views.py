@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import permission_required
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Major, Subject, Course, Student
@@ -39,7 +40,7 @@ def createmajor(request):
         if form.is_valid():
             form.save()
             messages.success(request, ('Item has been successfully added to the database!'))
-            return HttpResponseRedirect('/')
+            # return HttpResponseRedirect('/')
     return render(request, 'lvplaner/createmajor.html', {'form': form})
 
 
@@ -51,7 +52,7 @@ def delete_major(request):
         item = Major.objects.get(major_name=item_id)
         item.delete()
         messages.success(request, ('Major has been deleted!'))
-        return HttpResponseRedirect('/')
+         # return HttpResponseRedirect('/')
     return render(request, 'lvplaner/deletemajor.html', {'form': form, 'inventory': inventory})
 
 
@@ -62,7 +63,7 @@ def createsubject(request):
         if form.is_valid():
             form.save()
             messages.success(request, ('Subject has been successfully added'))
-            return HttpResponseRedirect('/')
+            # return HttpResponseRedirect('/')
     return render(request, 'lvplaner/createsubject.html', {'form': form})
 
 
@@ -74,7 +75,7 @@ def deletesubject(request):
         item = Subject.objects.get(title=item_id)
         item.delete()
         messages.success(request, ('Subject has been deleted!'))
-        return HttpResponseRedirect('/')
+        # return HttpResponseRedirect('/')
     return render(request, 'lvplaner/deletesubject.html', {'form': form, 'inventory': inventory})
 
 
@@ -85,7 +86,7 @@ def createcourse(request):
         if form.is_valid():
             form.save()
             messages.success(request, ('Course has been successfully added'))
-            return HttpResponseRedirect('/')
+            # return HttpResponseRedirect('/')
     return render(request, 'lvplaner/createcourse.html', {'form': form})
 
 # def deletecourse(request):
