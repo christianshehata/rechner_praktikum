@@ -28,7 +28,7 @@ urlpatterns = [
     path('hello/', views.HelloWorldView.as_view(), name='hello'),
     path('suggest/', views.suggestion_view, name='suggestion'),
     path('', views.hello_world, name='authentication'),
-    path('/home', views.home, name='home'),
+    path('home/', views.home, name='home'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
