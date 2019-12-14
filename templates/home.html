@@ -3,31 +3,34 @@
 {% block content %}
 <header>
    <h1> Hi {{ user.username }}! </h1>
-   {% if user.is_authenticated and user.username == 'admin' %}
-    <nav class="cl-effect-21" id="cl-effect-21">
-         <a href="{% url 'list' %}">Studienrichtungen</a>
-        <a href="{% url 'createmajor' %}">Studium hinzufügen</a>
-        <a href="{% url 'createsubject' %}">Fach hinzufügen</a>
-        <a href="{% url 'deletesubject' %}">Fach löschen</a>
-        <a href="{% url 'deletemajor' %}">Studium löschen</a>
-        <a href="{% url 'createcourse' %}">Kurs hinzufügen </a>
-        <a href="{% url 'users' %}">Users </a>
-        <a href="{% url 'deleteusers' %}">User löschen </a>
-         <a href="{% url 'logout' %}">logout</a>
-        </nav>
-   {% else %}
+    {% if user.username is not 'admin' %}
    <nav class="cl-effect-21" id="cl-effect-21">
-      <a href="{% url 'logout' %}">logout</a>
-         <a href="{% url 'list' %}">Studienrichtungen</a>
-        <a href="{% url 'suggestion' %}">Feedback</a>
+       <a href="{% url 'list' %}">Studienrichtungen 📚</a>
+       <a href="{% url 'suggestion' %}">Feedback 💡</a>
+       <a href="{% url 'logout' %}">Logout </a>
         </nav>
     {% endif %}
 </header>
 <body>
+<nav class="cl-effect-21" id="cl-effect-21">
+    {% if user.is_staff %}
+         <h3>Verwaltung</h3>
+    <img src="/static/assets/drib.png" width="400" height="300">
+    <img src="/static/assets/spot.png" width="400" height="300">
+    <div class="columns">
+        <a href="{% url 'createmajor' %}">Studium hinzufügen</a>
+        <a href="{% url 'deletemajor' %}">Studium löschen</a>
+        <a href="{% url 'createsubject' %}">Fach hinzufügen</a>
+        <a href="{% url 'deletesubject' %}">Fach löschen</a>
+        <a href="{% url 'createcourse' %}">Kurs hinzufügen</a>
+        <a href="{% url 'deletecourse' %}">Kurs löschen</a>
+        <a href="{% url 'users' %}">User </a>
+        <a href="{% url 'deleteusers' %}">User löschen</a>
+    </div>
+    {% endif %}
+</nav>
 
 <h3> Viel Spaß beim Ausprobieren 🤓 </h3>
 <a href="/lvplaner/">START</a>
-<!--<h2><a href="/accounts/signup/">Sign-Up</a> </h2>
-<h2><a href="/accounts/login/">Login</a></h2>-->
 </body>
 {% endblock content %}

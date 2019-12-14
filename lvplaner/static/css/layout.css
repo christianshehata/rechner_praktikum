@@ -42,14 +42,9 @@ position: fixed;
 }
 
 .cl-effect-21 a:hover, .cl-effect-21 a:focus {
-    color: #fff;
+    color: #000080;
 }
 
-nav a:hover, nav a:focus {
-    outline-color: initial;
-    outline-style: none;
-    outline-width: initial;
-}
 
 .cl-effect-21 a {
     padding: 5px;
@@ -88,6 +83,10 @@ div.c {
   border: 3px solid green;
 }
 
+.columns {
+    column-count: 4;
+
+}
 
 
 

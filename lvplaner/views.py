@@ -89,13 +89,13 @@ def createcourse(request):
             # return HttpResponseRedirect('/')
     return render(request, 'lvplaner/createcourse.html', {'form': form})
 
-# def deletecourse(request):
-#     form = CourseForm()
-#     inventory = Course.objects.all()
-#     if request.method == 'POST':
-#         item_id = str(request.POST.get('course_id'))
-#         item = Course.objects.get(course_id=item_id)
-#         item.delete()
-#         messages.success(request, ('Course has been deleted!'))
-#         return HttpResponseRedirect('/')
-#     return render(request, 'lvplaner/deletecourse.html', {'form': form, 'inventory': inventory})
+def deletecourse(request):
+    form = CourseForm()
+    inventory = Course.objects.all()
+    if request.method == 'POST':
+        item_id = str(request.POST.get('course_id'))
+        item = Course.objects.get(course_id=item_id)
+        item.delete()
+        messages.success(request, ('Course has been deleted!'))
+        return HttpResponseRedirect('/')
+    return render(request, 'lvplaner/deletecourse.html', {'form': form, 'inventory': inventory})
