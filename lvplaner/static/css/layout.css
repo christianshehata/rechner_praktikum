@@ -236,3 +236,10 @@ div.c {
     padding: 0.75em 0.75em; }
     .card .card-copy p {
       margin: 0 0 0.75em; }
+
+@media screen and (max-width: 1000px) {
+    .lvtool {
+    width: 50%
+
+    }
+}
