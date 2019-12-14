@@ -5,14 +5,15 @@
    <h1> Hi {{ user.username }}! </h1>
    {% if user.is_authenticated and user.username == 'admin' %}
     <nav class="cl-effect-21" id="cl-effect-21">
-      <a href="{% url 'logout' %}">logout</a>
-         <a href="{% url 'students' %}">Studenten</a>
          <a href="{% url 'list' %}">Studienrichtungen</a>
         <a href="{% url 'createmajor' %}">Studium hinzufügen</a>
         <a href="{% url 'createsubject' %}">Fach hinzufügen</a>
         <a href="{% url 'deletesubject' %}">Fach löschen</a>
         <a href="{% url 'deletemajor' %}">Studium löschen</a>
         <a href="{% url 'createcourse' %}">Kurs hinzufügen </a>
+        <a href="{% url 'users' %}">Users </a>
+        <a href="{% url 'deleteusers' %}">User löschen </a>
+         <a href="{% url 'logout' %}">logout</a>
         </nav>
    {% else %}
    <nav class="cl-effect-21" id="cl-effect-21">

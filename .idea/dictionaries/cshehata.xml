@@ -8,11 +8,14 @@
       <w>deletecourse</w>
       <w>deletemajor</w>
       <w>deletesubject</w>
+      <w>deleteuser</w>
+      <w>deleteusers</w>
       <w>endblock</w>
       <w>filebased</w>
       <w>lvplaner</w>
       <w>lvtool</w>
       <w>smtp</w>
+      <w>userlist</w>
     </words>
   </dictionary>
 </component>

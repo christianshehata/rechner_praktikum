@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title%} USER {% endblock %}
+
+{% block content %}
+
+<header>
+<h2> Registrierte User </h2>
+</header>
+<br />
+<body>
+<div class="cards">
+   {% for user in users %}
+    <div class = "card">
+        <header> {{ user }} </header>
+        <div class="card-copy">
+            Beigetreten am
+            {{ user.date_joined }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</body>
+{% endblock %}

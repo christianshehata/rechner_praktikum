@@ -22,7 +22,7 @@ from . import views
 
 urlpatterns = [
     path('lvplaner/', include('lvplaner.urls')),
-    url(r'^accounts/', include(('accounts.urls', 'accounts'), namespace='accounts')),
+    path('accounts/', include('accounts.urls')),
     url(r'^accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
     path('hello/', views.HelloWorldView.as_view(), name='hello'),

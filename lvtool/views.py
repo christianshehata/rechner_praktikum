@@ -24,7 +24,7 @@ def suggestion_view(request):
         if form.is_valid():
             print('Form ✔️')
             send_mail(
-                'Suggestion form {}'.format(form.cleaned_data['name']),
+                'Suggestion from {}'.format(form.cleaned_data['name']),
                 form.cleaned_data['suggestion'],
                 '{name} <{email}>'.format(**form.cleaned_data),
                 ['lvplaner@gmail.com']
