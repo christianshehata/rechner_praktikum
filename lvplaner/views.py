@@ -52,7 +52,7 @@ def delete_major(request):
         item = Major.objects.get(major_name=item_id)
         item.delete()
         messages.success(request, ('Major has been deleted!'))
-         # return HttpResponseRedirect('/')
+        # return HttpResponseRedirect('/')
     return render(request, 'lvplaner/deletemajor.html', {'form': form, 'inventory': inventory})
 
 
@@ -88,6 +88,7 @@ def createcourse(request):
             messages.success(request, ('Course has been successfully added'))
             # return HttpResponseRedirect('/')
     return render(request, 'lvplaner/createcourse.html', {'form': form})
+
 
 def deletecourse(request):
     form = CourseForm()
